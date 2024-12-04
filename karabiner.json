@@ -8,37 +8,72 @@
                 },
                 "rules": [
                     {
-                        "description": "Make '|' = Control, ']' = Option, '[' = Command when held",
-                        "enabled": false,
+                        "description": "Window management with Hyper + A + Key",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "backslash",
-                                    "modifiers": { "optional": ["any"] }
+                                    "key_code": "h",
+                                    "modifiers": {
+                                        "mandatory": ["left_command", "left_control", "left_option", "left_shift"],
+                                        "optional": ["caps_lock"]
+                                    }
                                 },
-                                "parameters": { "basic.to_if_alone_timeout_milliseconds": 300 },
-                                "to": [{ "key_code": "left_control" }],
-                                "to_if_alone": [{ "key_code": "backslash" }],
+                                "to": [{ "shell_command": "yabai -m window --resize left:50%" }],
                                 "type": "basic"
                             },
                             {
                                 "from": {
-                                    "key_code": "close_bracket",
-                                    "modifiers": { "optional": ["any"] }
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "mandatory": ["left_command", "left_control", "left_option", "left_shift"],
+                                        "optional": ["caps_lock"]
+                                    }
                                 },
-                                "parameters": { "basic.to_if_alone_timeout_milliseconds": 300 },
-                                "to": [{ "key_code": "left_option" }],
-                                "to_if_alone": [{ "key_code": "close_bracket" }],
+                                "to": [{ "shell_command": "yabai -m window --resize right:50%" }],
                                 "type": "basic"
                             },
                             {
                                 "from": {
-                                    "key_code": "open_bracket",
-                                    "modifiers": { "optional": ["any"] }
+                                    "key_code": "u",
+                                    "modifiers": {
+                                        "mandatory": ["left_command", "left_control", "left_option", "left_shift"],
+                                        "optional": ["caps_lock"]
+                                    }
                                 },
-                                "parameters": { "basic.to_if_alone_timeout_milliseconds": 300 },
-                                "to": [{ "key_code": "left_command" }],
-                                "to_if_alone": [{ "key_code": "open_bracket" }],
+                                "to": [{ "shell_command": "yabai -m window --grid 4:4:0:0:2:2" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": {
+                                        "mandatory": ["left_command", "left_control", "left_option", "left_shift"],
+                                        "optional": ["caps_lock"]
+                                    }
+                                },
+                                "to": [{ "shell_command": "yabai -m window --grid 4:4:2:0:2:2" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": {
+                                        "mandatory": ["left_command", "left_control", "left_option", "left_shift"],
+                                        "optional": ["caps_lock"]
+                                    }
+                                },
+                                "to": [{ "shell_command": "yabai -m window --grid 4:4:0:2:2:2" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "mandatory": ["left_command", "left_control", "left_option", "left_shift"],
+                                        "optional": ["caps_lock"]
+                                    }
+                                },
+                                "to": [{ "shell_command": "yabai -m window --grid 4:4:2:2:2:2" }],
                                 "type": "basic"
                             }
                         ]
@@ -204,9 +239,9 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "a = ChatGPT",
+                                "description": "c = ChatGPT",
                                 "from": {
-                                    "key_code": "a",
+                                    "key_code": "c",
                                     "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
                                 },
                                 "to": [{ "shell_command": "open -b com.openai.chat" }],
