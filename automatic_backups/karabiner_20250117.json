@@ -155,7 +155,7 @@
                                     "key_code": "z",
                                     "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Zen Browser'" }],
+                                "to": [{ "shell_command": "open -b org.mozilla.com.zen.browser" }],
                                 "type": "basic"
                             },
                             {
@@ -165,15 +165,6 @@
                                     "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Google Chrome'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "Cmd q = Chrome Incognito",
-                                "from": {
-                                    "key_code": "q",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option", "left_command"] }
-                                },
-                                "to": [{ "shell_command": "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --incognito" }],
                                 "type": "basic"
                             },
                             {
@@ -204,15 +195,6 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "Cmd e = Firefox Private Window",
-                                "from": {
-                                    "key_code": "e",
-                                    "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option", "left_command"] }
-                                },
-                                "to": [{ "shell_command": "/Applications/Firefox.app/Contents/MacOS/firefox --private-window" }],
-                                "type": "basic"
-                            },
-                            {
                                 "description": "command + r = Finder",
                                 "from": {
                                     "key_code": "r",
@@ -222,21 +204,12 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "command + r = Finder",
+                                "description": "r = iTerm2",
                                 "from": {
                                     "key_code": "r",
-                                    "modifiers": { "mandatory": ["left_command", "right_command", "right_control", "right_shift", "right_option"] }
-                                },
-                                "to": [{ "shell_command": "open -a Finder" }],
-                                "type": "basic"
-                            },
-                            {
-                                "description": "m = Messages",
-                                "from": {
-                                    "key_code": "m",
                                     "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
                                 },
-                                "to": [{ "shell_command": "open -a Messages" }],
+                                "to": [{ "shell_command": "open -a iTerm" }],
                                 "type": "basic"
                             },
                             {
